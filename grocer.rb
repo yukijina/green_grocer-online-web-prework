@@ -61,7 +61,7 @@ def checkout(cart, coupons)
   applied_clearance = apply_clearance(applied_coupon)
   
   array = []
-  cart.each do |item, data|
+  applied_clearance.each do |item, data|
     array << cart[item][:price] * cart[item][:count]
   end
   sum = array.inject(0){|sum,x| sum + x}
