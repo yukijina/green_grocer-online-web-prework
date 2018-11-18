@@ -62,7 +62,7 @@ def checkout(cart, coupons)
   
   array = []
   applied_clearance.each do |item, data|
-    array << capplied_clearance[item][:price] * applied_clearance[item][:count]
+    array << applied_clearance[item][:price] * applied_clearance[item][:count]
   end
   sum = array.inject(0){|sum,x| sum + x}
   sum >=100? (sum*0.9).round(2): sum.round(2)
