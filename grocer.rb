@@ -58,7 +58,7 @@ def checkout(cart, coupons)
   # code here
   consolidated = consolidate_cart(cart)
   applied_coupon = apply_coupons(consolidated, coupons)
-  apply_clearance(applied_coupon)
+  applied_clearance = apply_clearance(applied_coupon)
   
   array = []
   cart.each do |item, data|
